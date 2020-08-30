@@ -11,11 +11,11 @@ from keras.optimizers import Adam
 from keras.layers import Dropout, Flatten
 from keras.layers.convolutional import Conv2D, MaxPooling2D
 import pickle
-
+import tensorflowjs as tfjs
 # ------------Hoisting-------------
 pathToDataset = 'DataSet'
 imageDimensions = (32, 32, 3)
-
+tfjs_target_dir = './'
 
 def listDir(path):
     lst = os.listdir(path)
@@ -165,6 +165,8 @@ print('Test Accuracy =', score[1])
 
 print("saving model...")
 model.save("test_model.h5",overwrite=True, include_optimizer=True)
-pickle_out= open("model_trained.p", "wb")
-pickle.dump(model,pickle_out)
-pickle_out.close()
+# pickle_out= open("model_trained.p", "wb")
+# pickle.dump(model,pickle_out)
+# pickle_out.close()
+
+tfjs.converters.save_keras_model(model, tfjs_target_dir)

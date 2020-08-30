@@ -1,0 +1,32 @@
+{
+  "name": "sudoku-solver-wasm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "build": "webpack",
+    "serve": "npm run watch && webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Keith3895/sudoku-solver-wasm.git"
+  },
+  "author": "Keith Franklin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Keith3895/sudoku-solver-wasm/issues"
+  },
+  "homepage": "https://github.com/Keith3895/sudoku-solver-wasm#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

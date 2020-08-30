@@ -1,3 +1,5 @@
 .vscode
 DataSet
 __pycache__
+sampleRun
+node_modules
